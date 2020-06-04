@@ -17,8 +17,8 @@ body {
 .san{
     position: absolute;
    
-    border: 10px solid red;
-    border-color: red transparent transparent;
+    border: 10px solid black;
+    border-color: black transparent transparent;
     border-bottom: none;
     top: 200px;
     left: 50%;
@@ -27,12 +27,16 @@ body {
 .yuan{
     position: absolute;
     width: 20px;
-    height: 6px;
-    background:red;
-    top: -16px;
+    height: 4px;
+    background:black;
+    top: -14px;
     left: -10px;
-    border-radius: 10px 10px 0 0;
+    border-top-left-radius:11px 5px ;
+    border-top-right-radius: 11px 5px ;
 }
+.nose:hover {
+    animation:nose .23s infinite linear;
+  }
 .eye{
     width: 64px;
     height: 64px;
@@ -126,7 +130,7 @@ body {
     height: 150px;
     position: absolute;
     bottom: -25px;
-    border: 1px solid red;
+
     border-radius:75px/100px;
     background-color: #ff485f;
 }
@@ -150,3 +154,9 @@ body {
 
     background-color: red;
 }
+@keyframes nose {
+    0% { transform:rotate(0deg); }
+    33% { transform:rotate(-1deg); }
+    67% { transform:rotate(1deg); }
+    100% { transform:rotate(0deg); }
+  }
